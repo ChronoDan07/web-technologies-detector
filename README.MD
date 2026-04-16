@@ -177,3 +177,33 @@ It is currently simple, but extensible toward:
 * smarter scoring
 * large-scale crawling
 * automated rule discovery
+
+## How to Run
+
+### 1. Install Python dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Generate processed domains file
+
+Run the Python extractor to process the parquet dataset:
+```bash
+python extractor.py
+```
+This will generate:
+```bash
+input/processed/domains.json
+```
+### 3. Install Node dependencies
+
+```bash
+npm install
+```
+
+### 4. Run the project
+
+```bash
+npm start
+```

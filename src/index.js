@@ -130,6 +130,8 @@ async function main() {
     await sleep(BATCH_DELAY);
   }
 
+  fs.mkdirSync("./output", { recursive: true });
+
   fs.writeFileSync(
     OUTPUT_FILE,
     JSON.stringify(results, null, 2),

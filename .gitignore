@@ -1,0 +1,42 @@
+# ========== Python ==========
+env/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# virtualenv folders (your current structure)
+bin/
+include/
+lib/
+lib64/
+pyvenv.cfg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ========== Node ==========
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========== Project outputs ==========
+output/
+*.log
+
+# keep structure but ignore generated results
+output/results.json
+
+# ========== OS ==========
+.DS_Store
+Thumbs.db
+
+# ========== IDE ==========
+.vscode/
+.idea/

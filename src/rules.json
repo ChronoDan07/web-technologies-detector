@@ -1,0 +1,331 @@
+{
+  "shopify": {
+    "signals": [
+      { "type": "headers", "patterns": ["x-shopify"], "weight": 0.5 },
+      { "type": "html", "patterns": ["cdn.shopify.com", "shopify"], "weight": 0.4 },
+      { "type": "cookies", "patterns": ["_shopify"], "weight": 0.1 }
+    ]
+  },
+  "wordpress": {
+    "signals": [
+      { "type": "html", "patterns": ["wp-content", "wp-includes"], "weight": 0.7 },
+      { "type": "meta", "patterns": ["wordpress"], "weight": 0.3 }
+    ]
+  },
+  "woocommerce": {
+    "signals": [{ "type": "html", "patterns": ["woocommerce"], "weight": 1 }]
+  },
+  "magento": {
+    "signals": [{ "type": "html", "patterns": ["mage/", "magento"], "weight": 1 }]
+  },
+  "prestashop": {
+    "signals": [{ "type": "html", "patterns": ["prestashop"], "weight": 1 }]
+  },
+  "bigcommerce": {
+    "signals": [{ "type": "html", "patterns": ["bigcommerce", "cdn.bigcommerce.com", "stencil", "__bc"], "weight": 1 }]
+  },
+  "opencart": {
+    "signals": [{ "type": "html", "patterns": ["opencart", "catalog/view/theme", "index.php?route="], "weight": 1 }]
+  },
+  "lightspeed": {
+    "signals": [{ "type": "html", "patterns": ["lightspeed", "lsretail"], "weight": 1 }]
+  },
+  "ghost": {
+    "signals": [{ "type": "html", "patterns": ["ghost", "ghost-framework", "__ghost"], "weight": 1 }]
+  },
+  "drupal": {
+    "signals": [
+      { "type": "html", "patterns": ["drupal", "data-drupal", "sites/default/files"], "weight": 0.7 },
+      { "type": "meta", "patterns": ["drupal"], "weight": 0.2 },
+      { "type": "headers", "patterns": ["x-drupal"], "weight": 0.1 }
+    ]
+  },
+  "joomla": {
+    "signals": [{ "type": "html", "patterns": ["joomla", "com_content", "/media/system/"], "weight": 1 }]
+  },
+  "wix": {
+    "signals": [{ "type": "html", "patterns": ["wixstatic.com"], "weight": 1 }]
+  },
+  "squarespace": {
+    "signals": [{ "type": "html", "patterns": ["squarespace"], "weight": 1 }]
+  },
+  "webflow": {
+    "signals": [{ "type": "html", "patterns": ["webflow"], "weight": 1 }]
+  },
+  "shopify_payments": {
+    "signals": [{ "type": "html", "patterns": ["shopify_payments"], "weight": 1 }]
+  },
+  "stripe": {
+    "signals": [{ "type": "html", "patterns": ["js.stripe.com"], "weight": 1 }]
+  },
+  "paypal": {
+    "signals": [{ "type": "html", "patterns": ["paypal.com/sdk"], "weight": 1 }]
+  },
+  "laravel": {
+    "signals": [
+      { "type": "headers", "patterns": ["x-powered-by.*laravel"], "weight": 0.5 },
+      { "type": "cookies", "patterns": ["laravel_session"], "weight": 0.3 },
+      { "type": "html", "patterns": ["laravel"], "weight": 0.2 }
+    ]
+  },
+  "symfony": {
+    "signals": [
+      { "type": "html", "patterns": ["sf-toolbar", "symfony"], "weight": 0.7 },
+      { "type": "headers", "patterns": ["symfony"], "weight": 0.3 }
+    ]
+  },
+  "django": {
+    "signals": [
+      { "type": "html", "patterns": ["django", "csrfmiddlewaretoken"], "weight": 0.5 },
+      { "type": "cookies", "patterns": ["sessionid", "csrftoken"], "weight": 0.3 },
+      { "type": "headers", "patterns": ["x-django"], "weight": 0.2 }
+    ]
+  },
+  "flask": {
+    "signals": [
+      { "type": "cookies", "patterns": ["session"], "weight": 0.6 },
+      { "type": "html", "patterns": ["flask"], "weight": 0.4 }
+    ]
+  },
+  "ruby_on_rails": {
+    "signals": [
+      { "type": "headers", "patterns": ["x-powered-by.*rails", "x-rack"], "weight": 0.5 },
+      { "type": "cookies", "patterns": ["_session_id"], "weight": 0.3 },
+      { "type": "html", "patterns": ["rails"], "weight": 0.2 }
+    ]
+  },
+  "asp_net": {
+    "signals": [
+      { "type": "headers", "patterns": ["x-powered-by.*asp.net"], "weight": 0.7 },
+      { "type": "html", "patterns": ["__VIEWSTATE", "aspnet"], "weight": 0.3 }
+    ]
+  },
+  "spring_boot": {
+    "signals": [
+      { "type": "headers", "patterns": ["x-powered-by.*spring"], "weight": 0.6 },
+      { "type": "html", "patterns": ["spring"], "weight": 0.4 }
+    ]
+  },
+  "express": {
+    "signals": [
+      { "type": "headers", "patterns": ["x-powered-by.*express"], "weight": 0.8 },
+      { "type": "cookies", "patterns": ["connect.sid"], "weight": 0.2 }
+    ]
+  },
+  "nodejs": {
+    "signals": [{ "type": "headers", "patterns": ["express", "node"], "weight": 1 }]
+  },
+  "php": {
+    "signals": [{ "type": "headers", "patterns": ["x-powered-by.*php"], "weight": 1 }]
+  },
+  "react": {
+    "signals": [{ "type": "html", "patterns": ["react", "__react"], "weight": 1 }]
+  },
+  "nextjs": {
+    "signals": [{ "type": "html", "patterns": ["_next", "__next"], "weight": 1 }]
+  },
+  "nuxtjs": {
+    "signals": [{ "type": "html", "patterns": ["__nuxt", "_nuxt", "nuxt"], "weight": 1 }]
+  },
+  "gatsby": {
+    "signals": [{ "type": "html", "patterns": ["gatsby", "__gatsby"], "weight": 1 }]
+  },
+  "vue": {
+    "signals": [
+      { "type": "html", "patterns": ["data-v-"], "weight": 0.5 },
+      { "type": "js", "patterns": ["vue"], "weight": 0.5 }
+    ]
+  },
+  "svelte": {
+    "signals": [{ "type": "html", "patterns": ["svelte", "data-svelte"], "weight": 1 }]
+  },
+  "angular": {
+    "signals": [{ "type": "html", "patterns": ["ng-version"], "weight": 1 }]
+  },
+  "astro": {
+    "signals": [{ "type": "html", "patterns": ["astro", "__astro"], "weight": 1 }]
+  },
+  "remix": {
+    "signals": [{ "type": "html", "patterns": ["remix", "__remix"], "weight": 1 }]
+  },
+  "qwik": {
+    "signals": [{ "type": "html", "patterns": ["qwik", "q:"], "weight": 1 }]
+  },
+  "solidjs": {
+    "signals": [{ "type": "html", "patterns": ["solid", "solid-js"], "weight": 1 }]
+  },
+  "jquery": {
+    "signals": [{ "type": "html", "patterns": ["jquery"], "weight": 1 }]
+  },
+  "bootstrap": {
+    "signals": [{ "type": "html", "patterns": ["bootstrap"], "weight": 1 }]
+  },
+  "tailwind": {
+    "signals": [{ "type": "html", "patterns": ["tailwind"], "weight": 1 }]
+  },
+  "bulma": {
+    "signals": [{ "type": "html", "patterns": ["bulma"], "weight": 1 }]
+  },
+  "foundation": {
+    "signals": [{ "type": "html", "patterns": ["foundation"], "weight": 1 }]
+  },
+  "materialize": {
+    "signals": [{ "type": "html", "patterns": ["materialize"], "weight": 1 }]
+  },
+  "lodash": {
+    "signals": [{ "type": "html", "patterns": ["lodash"], "weight": 1 }]
+  },
+  "axios": {
+    "signals": [{ "type": "html", "patterns": ["axios"], "weight": 1 }]
+  },
+  "cloudflare": {
+    "signals": [
+      { "type": "headers", "patterns": ["cf-ray", "cloudflare"], "weight": 0.7 },
+      { "type": "html", "patterns": ["cdnjs.cloudflare.com"], "weight": 0.3 }
+    ]
+  },
+  "aws": {
+    "signals": [{ "type": "headers", "patterns": ["x-amz"], "weight": 1 }]
+  },
+  "cloudfront": {
+    "signals": [{ "type": "headers", "patterns": ["x-amz-cf", "cloudfront"], "weight": 1 }]
+  },
+  "nginx": {
+    "signals": [{ "type": "headers", "patterns": ["nginx"], "weight": 1 }]
+  },
+  "apache": {
+    "signals": [{ "type": "headers", "patterns": ["apache"], "weight": 1 }]
+  },
+  "varnish": {
+    "signals": [{ "type": "headers", "patterns": ["x-varnish"], "weight": 1 }]
+  },
+  "vercel": {
+    "signals": [{ "type": "headers", "patterns": ["vercel"], "weight": 1 }]
+  },
+  "netlify": {
+    "signals": [{ "type": "headers", "patterns": ["netlify"], "weight": 1 }]
+  },
+  "heroku": {
+    "signals": [{ "type": "headers", "patterns": ["heroku"], "weight": 1 }]
+  },
+  "firebase": {
+    "signals": [{ "type": "html", "patterns": ["firebase", "firebaseio.com"], "weight": 1 }]
+  },
+  "akamai": {
+    "signals": [{ "type": "headers", "patterns": ["akamai", "x-akamai"], "weight": 1 }]
+  },
+  "fastly": {
+    "signals": [{ "type": "headers", "patterns": ["fastly"], "weight": 1 }]
+  },
+  "google_analytics": {
+    "signals": [{ "type": "html", "patterns": ["google-analytics"], "weight": 1 }]
+  },
+  "google_tag_manager": {
+    "signals": [{ "type": "html", "patterns": ["googletagmanager"], "weight": 1 }]
+  },
+  "facebook_pixel": {
+    "signals": [{ "type": "html", "patterns": ["fbq(", "connect.facebook"], "weight": 1 }]
+  },
+  "hotjar": {
+    "signals": [{ "type": "html", "patterns": ["hotjar"], "weight": 1 }]
+  },
+  "amplitude": {
+    "signals": [{ "type": "html", "patterns": ["amplitude.com", "amplitude"], "weight": 1 }]
+  },
+  "matomo": {
+    "signals": [{ "type": "html", "patterns": ["matomo", "piwik"], "weight": 1 }]
+  },
+  "plausible": {
+    "signals": [{ "type": "html", "patterns": ["plausible.io"], "weight": 1 }]
+  },
+  "clarity": {
+    "signals": [{ "type": "html", "patterns": ["clarity.ms"], "weight": 1 }]
+  },
+  "heap": {
+    "signals": [{ "type": "html", "patterns": ["heap.io", "heapanalytics"], "weight": 1 }]
+  },
+  "mixpanel": {
+    "signals": [{ "type": "html", "patterns": ["mixpanel"], "weight": 1 }]
+  },
+  "segment": {
+    "signals": [{ "type": "html", "patterns": ["segment.com"], "weight": 1 }]
+  },
+  "datadog": {
+    "signals": [{ "type": "html", "patterns": ["datadog"], "weight": 1 }]
+  },
+  "captcha_recaptcha": {
+    "signals": [{ "type": "html", "patterns": ["recaptcha"], "weight": 1 }]
+  },
+  "captcha_hcaptcha": {
+    "signals": [{ "type": "html", "patterns": ["hcaptcha"], "weight": 1 }]
+  },
+  "cdn_jsdelivr": {
+    "signals": [{ "type": "html", "patterns": ["cdn.jsdelivr.net"], "weight": 1 }]
+  },
+  "font_awesome": {
+    "signals": [{ "type": "html", "patterns": ["font-awesome"], "weight": 1 }]
+  },
+  "google_fonts": {
+    "signals": [{ "type": "html", "patterns": ["fonts.googleapis.com"], "weight": 1 }]
+  },
+  "youtube_embed": {
+    "signals": [{ "type": "html", "patterns": ["youtube.com/embed"], "weight": 1 }]
+  },
+  "google_maps": {
+    "signals": [{ "type": "html", "patterns": ["maps.googleapis.com"], "weight": 1 }]
+  },
+  "elementor": {
+    "signals": [{ "type": "html", "patterns": ["elementor"], "weight": 1 }]
+  },
+  "hubspot": {
+    "signals": [{ "type": "html", "patterns": ["hubspot", "hs-scripts"], "weight": 1 }]
+  },
+  "marketo": {
+    "signals": [{ "type": "html", "patterns": ["marketo", "munchkin"], "weight": 1 }]
+  },
+  "optimizely": {
+    "signals": [{ "type": "html", "patterns": ["optimizely"], "weight": 1 }]
+  },
+  "vwo": {
+    "signals": [{ "type": "html", "patterns": ["visualwebsiteoptimizer", "vwo"], "weight": 1 }]
+  },
+  "intercom": {
+    "signals": [{ "type": "html", "patterns": ["intercom"], "weight": 1 }]
+  },
+  "zendesk": {
+    "signals": [{ "type": "html", "patterns": ["zendesk", "zopim"], "weight": 1 }]
+  },
+  "mailchimp": {
+    "signals": [{ "type": "html", "patterns": ["mailchimp", "mc-embedded"], "weight": 1 }]
+  },
+  "klaviyo": {
+    "signals": [{ "type": "html", "patterns": ["klaviyo"], "weight": 1 }]
+  },
+  "contentful": {
+    "signals": [{ "type": "html", "patterns": ["contentful"], "weight": 1 }]
+  },
+  "strapi": {
+    "signals": [{ "type": "html", "patterns": ["strapi"], "weight": 1 }]
+  },
+  "sanity": {
+    "signals": [{ "type": "html", "patterns": ["sanity"], "weight": 1 }]
+  },
+  "adobe_experience_manager": {
+    "signals": [{ "type": "html", "patterns": ["aem", "adobe experience"], "weight": 1 }]
+  },
+  "typo3": {
+    "signals": [{ "type": "html", "patterns": ["typo3"], "weight": 1 }]
+  },
+  "concrete5": {
+    "signals": [{ "type": "html", "patterns": ["concrete5"], "weight": 1 }]
+  },
+  "umbraco": {
+    "signals": [{ "type": "html", "patterns": ["umbraco"], "weight": 1 }]
+  },
+  "sitecore": {
+    "signals": [{ "type": "html", "patterns": ["sitecore"], "weight": 1 }]
+  },
+  "salesforce_commerce_cloud": {
+    "signals": [{ "type": "html", "patterns": ["demandware", "salesforce commerce"], "weight": 1 }]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "web-technologies-detector",
+  "version": "1.0.0",
+  "description": "> A journey through building a technology detection engine — one wall at a time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
